@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import api from "./api";
 
+import MovieRow from "./components/MovieRow";
+
 import "./App.css";
 
 const App = () => {
@@ -11,7 +13,7 @@ const App = () => {
       let list = await api.getHomeList();
 
       setMovieList(list);
-      console.log(movieList)
+
     };
 
     loadAll();
@@ -19,10 +21,11 @@ const App = () => {
 
   return (
     <div className="page">
-      Header
-      Destaque
-      Listas
-      Rodapé
+      <section className="lists">
+        {movieList.map((item, key) => (
+          <MovieRow key={key} title={item.title} items={item.items} />
+        ))}
+      </section>
     </div>
   );
 };
