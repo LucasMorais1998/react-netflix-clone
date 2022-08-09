@@ -1,24 +1,28 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import api from "./api";
 
 import "./App.css";
 
 const App = () => {
-  useEffect(() => {
+  const [movieList, setMovieList] = useState([]);
 
+  useEffect(() => {
     const loadAll = async () => {
       let list = await api.getHomeList();
-      
-      console.log(list);
+
+      setMovieList(list);
+      console.log(movieList)
     };
 
     loadAll();
   }, []);
 
   return (
-    <div className="App">
-      <h1>Olá Mundo!</h1>
-
+    <div className="page">
+      Header
+      Destaque
+      Listas
+      Rodapé
     </div>
   );
 };
