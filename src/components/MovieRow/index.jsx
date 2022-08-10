@@ -4,17 +4,21 @@ const apiUrlImg = import.meta.env.VITE_API_IMG;
 
 const MovieRow = ({ title, items }) => {
   return (
-    <div>
+    <div className="movieRow">
       <h2>{title}</h2>
       <div className="movieRow-listArea">
-        {items.results.length > 0 &&
-          items.results.map((item, key) => (
-            <img
-              key={key}
-              src={`${apiUrlImg}${item.poster_path}`}
-              alt={item.title}
-            />
-          ))}
+        <div className="movieRow-list">
+          {items.results.length > 0 &&
+            items.results.map((item, key) => (
+              <div key={key} className="movieRow-item">
+                <img
+                  key={key}
+                  src={`${apiUrlImg}${item.poster_path}`}
+                  alt={item.title}
+                />
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

@@ -48,7 +48,7 @@ export default {
         slug: "animation",
         title: "Animação",
         items: await basicFetch(
-          `/discover/movie?api_key=${apiKey}&with_genres=12&language=pt-BR`
+          `/discover/movie?api_key=${apiKey}&with_genres=16&language=pt-BR`
         ),
       },
       {
