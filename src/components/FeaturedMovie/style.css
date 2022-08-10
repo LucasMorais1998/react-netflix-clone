@@ -1,0 +1,20 @@
+.featured {
+  height: 80vh;
+}
+
+.featured {
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-vertical {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featured-horizontal {
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 30%, transparent 70%);
+}

@@ -20,7 +20,11 @@ const Home = () => {
         Math.random() * originals[0].items.results.length - 1
       );
 
-      let chosen = originals[0].items.results[randomChosen]
+      let chosen = originals[0].items.results[randomChosen];
+
+      let chosenInfo = await api.getMovieInfo(chosen.id, "tv");
+
+      setFeaturedData(chosenInfo);
     };
 
     loadAll();
@@ -28,7 +32,9 @@ const Home = () => {
 
   return (
     <div className="page">
-      {featuredData && <FeaturedMovie item={featuredData} />}
+      {featuredData && 
+        <FeaturedMovie item={featuredData} />
+      }
 
       <section className="lists">
         {movieList.map((item, key) => (

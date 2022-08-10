@@ -38,13 +38,6 @@ export default {
         ),
       },
       {
-        slug: "adventure",
-        title: "Aventura",
-        items: await basicFetch(
-          `/discover/movie?api_key=${apiKey}&with_genres=12&language=pt-BR`
-        ),
-      },
-      {
         slug: "animation",
         title: "Animação",
         items: await basicFetch(
@@ -73,17 +66,17 @@ export default {
         ),
       },
       {
-        slug: "family",
-        title: "Família",
-        items: await basicFetch(
-          `/discover/movie?api_key=${apiKey}&with_genres=10751&language=pt-BR`
-        ),
-      },
-      {
         slug: "fantasy",
         title: "Fantasia",
         items: await basicFetch(
           `/discover/movie?api_key=${apiKey}&with_genres=14&language=pt-BR`
+        ),
+      },
+      {
+        slug: "history",
+        title: "História",
+        items: await basicFetch(
+          `/discover/movie?api_key=${apiKey}&with_genres=36&language=pt-BR`
         ),
       },
       {
@@ -119,6 +112,13 @@ export default {
         title: "Thriller",
         items: await basicFetch(
           `/discover/movie?api_key=${apiKey}&with_genres=53&language=pt-BR`
+        ),
+      },
+      {
+        slug: "war",
+        title: "Guerra",
+        items: await basicFetch(
+          `/discover/movie?api_key=${apiKey}&with_genres=10752&language=pt-BR`
         ),
       },
     ];
