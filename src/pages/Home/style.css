@@ -1,11 +1,17 @@
 .page {
- overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
   background-color: #141414;
 }
 
