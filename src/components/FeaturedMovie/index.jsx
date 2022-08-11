@@ -30,13 +30,13 @@ const FeaturedMovie = ({ item }) => {
             <div className="featured-description">{item.overview}</div>
             <div className="featured-buttons">
               <a href={`/watch/${item.id}`} className="featured-watch-button">
-                <BiPlay className="watch-button" /> Assistir
+                <BiPlay className="featured-watch-button-icon" /> Assistir
               </a>
               <a
                 href={`/list/add/${item.id}`}
                 className="featured-mylist-button"
               >
-                <BiPlus className="mylist-button" /> Minha Lista
+                <BiPlus className="featured-mylist-button-icon" /> Minha Lista
               </a>
             </div>
             <div className="featured-genres">

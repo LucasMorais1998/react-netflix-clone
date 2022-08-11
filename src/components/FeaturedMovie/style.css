@@ -88,7 +88,7 @@
   color: #000;
 }
 
-.watch-button {
+.featured-watch-button-icon {
   font-size: 2rem;
 }
 
@@ -97,7 +97,7 @@
   color: #fff;
 }
 
-.mylist-button {
+.featured-mylist-button-icon {
   font-size: 1.25rem;
 }
 
@@ -128,7 +128,7 @@
   }
 
   .featured-buttons {
-    gap: 1.25rem
+    gap: 1.25rem;
   }
 
   .featured-watch-button,

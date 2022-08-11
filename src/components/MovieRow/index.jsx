@@ -31,24 +31,24 @@ const MovieRow = ({ title, items }) => {
   };
 
   return (
-    <div className="movieRow">
+    <div className="movie-row">
       <h2>{title}</h2>
 
-      <div className="movieRow-left" onClick={handleLeftArrow}>
-        <MdOutlineArrowBackIos className="movieRow-left-icon" />
+      <div className="movie-row-left" onClick={handleLeftArrow}>
+        <MdOutlineArrowBackIos className="movie-row-left-icon" />
       </div>
-      <div className="movieRow-right" onClick={handleRightArrow}>
-        <MdOutlineArrowForwardIos className="movieRow-right-icon" />
+      <div className="movie-row-right" onClick={handleRightArrow}>
+        <MdOutlineArrowForwardIos className="movie-row-right-icon" />
       </div>
 
-      <div className="movieRow-listArea">
+      <div className="movie-row-list-area">
         <div
-          className="movieRow-list"
+          className="movie-row-list"
           style={{ marginLeft: scrollX, width: items.results.length * 150 }}
         >
           {items.results.length > 0 &&
             items.results.map((item, key) => (
-              <div key={key} className="movieRow-item">
+              <div key={key} className="movie-row-item">
                 <img
                   key={key}
                   src={`${apiUrlImg}${item.poster_path}`}
