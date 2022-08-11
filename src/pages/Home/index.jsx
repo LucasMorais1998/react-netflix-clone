@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import api from "../../api";
 
+import netflixGif from "../../assets/images/netflix-logo-gif.gif";
+
 import Header from "../../components/Header";
-import MovieRow from "../../components/MovieRow";
 import FeaturedMovie from "../../components/FeaturedMovie";
+import MovieRow from "../../components/MovieRow";
 
 import "./style.css";
 
@@ -37,7 +39,13 @@ const Home = () => {
     <div className="page">
       <Header />
 
-      {featuredData && <FeaturedMovie item={featuredData} />}
+      {featuredData ? (
+        <FeaturedMovie item={featuredData} />
+      ) : (
+        <div className="loading">
+          <img src={netflixGif} alt="Netflix Gif" />
+        </div>
+      )}
 
       <section className="lists">
         {movieList.map((item, key) => (
