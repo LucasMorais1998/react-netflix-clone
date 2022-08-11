@@ -9,7 +9,7 @@ import "./style.css";
 const apiUrlImg = import.meta.env.VITE_API_IMG;
 
 const MovieRow = ({ title, items }) => {
-  const [scrollX, setScrollX] = useState(-400);
+  const [scrollX, setScrollX] = useState(0);
 
   const handleLeftArrow = () => {
     let valueOfX = scrollX + Math.round(window.innerWidth / 2);
