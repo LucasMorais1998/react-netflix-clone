@@ -12,6 +12,7 @@ import "./style.css";
 const Home = () => {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [isBlackHeader, setIsBlackHeader] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -35,9 +36,23 @@ const Home = () => {
     loadAll();
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      return window.scrollY > 10
+        ? setIsBlackHeader(true)
+        : setIsBlackHeader(false);
+    };
+
+    window.addEventListener("scroll", scrollListener);
+
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
+
   return (
     <div className="page">
-      <Header />
+      <Header isBlackHeader={isBlackHeader} />
 
       {featuredData ? (
         <FeaturedMovie item={featuredData} />
