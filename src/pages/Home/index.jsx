@@ -6,6 +6,7 @@ import netflixGif from "../../assets/images/netflix-logo-gif.gif";
 import Header from "../../components/Header";
 import FeaturedMovie from "../../components/FeaturedMovie";
 import MovieRow from "../../components/MovieRow";
+import Footer from "../../components/Footer";
 
 import "./style.css";
 
@@ -67,6 +68,8 @@ const Home = () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <Footer />
     </div>
   );
 };
