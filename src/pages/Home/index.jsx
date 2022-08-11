@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../../api";
 
+import Header from "../../components/Header";
 import MovieRow from "../../components/MovieRow";
 import FeaturedMovie from "../../components/FeaturedMovie";
 
@@ -34,6 +35,8 @@ const Home = () => {
 
   return (
     <div className="page">
+      <Header />
+
       {featuredData && <FeaturedMovie item={featuredData} />}
 
       <section className="lists">
