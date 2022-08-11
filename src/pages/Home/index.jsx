@@ -4,6 +4,8 @@ import api from "../../api";
 import MovieRow from "../../components/MovieRow";
 import FeaturedMovie from "../../components/FeaturedMovie";
 
+import "./style.css";
+
 const Home = () => {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
@@ -32,9 +34,7 @@ const Home = () => {
 
   return (
     <div className="page">
-      {featuredData && 
-        <FeaturedMovie item={featuredData} />
-      }
+      {featuredData && <FeaturedMovie item={featuredData} />}
 
       <section className="lists">
         {movieList.map((item, key) => (
