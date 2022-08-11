@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   cursor: pointer;
   opacity: 0;
   transition: all ease-out 0.2s;
@@ -47,7 +48,7 @@
 }
 
 .movieRow-list {
-  width: 99999px;
+  transition: all ease 0.5s;
 }
 
 .movieRow-item {
