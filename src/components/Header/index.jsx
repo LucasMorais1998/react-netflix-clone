@@ -10,15 +10,15 @@ const Header = () => {
     <header>
       <div className="header-logo">
         <a href="/">
-          <img src={netflixLogo} alt="Logo da Netflix" width="130px" />
+          <img src={netflixLogo} alt="Logo da Netflix" />
         </a>
       </div>
       <div className="header-tools">
         <a href="#">
-          <BiBell />
+          <BiSearch className="header-tools-search-icon" />
         </a>
         <a href="#">
-          <BiSearch alt/>
+          <BiBell className="header-tools-notification-icon" />
         </a>
         <a href="#">
           <img src={userImg} alt="Imagem de perfil do usuário" />
