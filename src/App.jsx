@@ -1,11 +1,9 @@
-import Home from "./pages/Home";
+import Home from './pages/Home';
 
-import "./styles/global.css";
+import './styles/global.css';
 
 const App = () => {
-  return (
-    <Home/>
-  );
+  return <Home />;
 };
 
 export default App;

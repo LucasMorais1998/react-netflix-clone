@@ -1,6 +1,6 @@
-import { BiPlay, BiPlus } from "react-icons/bi";
+import { BiPlay, BiPlus } from 'react-icons/bi';
 
-import "./style.css";
+import './style.css';
 
 const apiUrlImg = import.meta.env.VITE_API_IMG_ORIGINAL;
 
@@ -25,22 +25,19 @@ const FeaturedMovie = ({ item }) => {
             <div className="featured-year">{firstDate.getFullYear()}</div>
             <div className="featured-seasons">
               {item.number_of_seasons} temporada
-              {item.number_of_seasons !== 1 ? "s" : ""}
+              {item.number_of_seasons !== 1 ? 's' : ''}
             </div>
             <div className="featured-description">{item.overview}</div>
             <div className="featured-buttons">
               <a href={`/watch/${item.id}`} className="featured-watch-button">
                 <BiPlay className="featured-watch-button-icon" /> Assistir
               </a>
-              <a
-                href={`/list/add/${item.id}`}
-                className="featured-mylist-button"
-              >
+              <a href={`/list/add/${item.id}`} className="featured-mylist-button">
                 <BiPlus className="featured-mylist-button-icon" /> Minha Lista
               </a>
             </div>
             <div className="featured-genres">
-              <strong>Gêneros:</strong> {genres.join(", ")}
+              <strong>Gêneros:</strong> {genres.join(', ')}
             </div>
           </div>
         </div>

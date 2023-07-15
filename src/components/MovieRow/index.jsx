@@ -1,10 +1,7 @@
-import { useState } from "react";
-import {
-  MdOutlineArrowBackIos,
-  MdOutlineArrowForwardIos,
-} from "react-icons/md";
+import { useState } from 'react';
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md';
 
-import "./style.css";
+import './style.css';
 
 const apiUrlImg = import.meta.env.VITE_API_IMG;
 
@@ -23,10 +20,10 @@ const MovieRow = ({ title, items }) => {
     let valueOfX = scrollX - Math.round(window.innerWidth / 2);
     let listWidth = items.results.length * 150;
 
-    if ((window.innerWidth - listWidth) > valueOfX) {
-      valueOfX = (window.innerWidth - listWidth) - 60;
+    if (window.innerWidth - listWidth > valueOfX) {
+      valueOfX = window.innerWidth - listWidth - 60;
     }
-    
+
     setScrollX(valueOfX);
   };
 
@@ -49,11 +46,7 @@ const MovieRow = ({ title, items }) => {
           {items.results.length > 0 &&
             items.results.map((item, key) => (
               <div key={key} className="movie-row-item">
-                <img
-                  key={key}
-                  src={`${apiUrlImg}${item.poster_path}`}
-                  alt={item.title}
-                />
+                <img key={key} src={`${apiUrlImg}${item.poster_path}`} alt={item.title} />
               </div>
             ))}
         </div>

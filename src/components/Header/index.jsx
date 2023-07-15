@@ -1,13 +1,13 @@
-import { BiBell, BiSearch } from "react-icons/bi";
+import { BiBell, BiSearch } from 'react-icons/bi';
 
-import netflixLogoImg from "../../assets/images/netflix-logo.png";
-import userImg from "../../assets/images/user-img.png";
+import netflixLogoImg from '../../assets/images/netflix-logo.png';
+import userImg from '../../assets/images/user-img.png';
 
-import "./style.css";
+import './style.css';
 
 const Header = ({ isBlackHeader }) => {
   return (
-    <header className={isBlackHeader ? "black" : ""}>
+    <header className={isBlackHeader ? 'black' : ''}>
       <div className="header-logo">
         <a href="/">
           <img src={netflixLogoImg} alt="Logo da Netflix" />

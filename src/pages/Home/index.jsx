@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import api from "../../services/api";
+import { useEffect, useState } from 'react';
+import api from '../../services/api';
 
-import netflixGif from "../../assets/images/netflix-logo-gif.gif";
+import netflixGif from '../../assets/images/netflix-logo-gif.gif';
 
-import Header from "../../components/Header";
-import FeaturedMovie from "../../components/FeaturedMovie";
-import MovieRow from "../../components/MovieRow";
-import Footer from "../../components/Footer";
+import FeaturedMovie from '../../components/FeaturedMovie';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import MovieRow from '../../components/MovieRow';
 
-import "./style.css";
+import './style.css';
 
 const Home = () => {
   const [movieList, setMovieList] = useState([]);
@@ -21,15 +21,13 @@ const Home = () => {
 
       setMovieList(list);
 
-      let originals = list.filter((item) => item.slug === "originals");
+      let originals = list.filter(item => item.slug === 'originals');
 
-      let randomChosen = Math.floor(
-        Math.random() * originals[0].items.results.length - 1
-      );
+      let randomChosen = Math.floor(Math.random() * originals[0].items.results.length - 1);
 
       let chosen = originals[0].items.results[randomChosen];
 
-      let chosenInfo = await api.getMovieInfo(chosen.id, "tv");
+      let chosenInfo = await api.getMovieInfo(chosen.id, 'tv');
 
       setFeaturedData(chosenInfo);
     };
@@ -39,15 +37,13 @@ const Home = () => {
 
   useEffect(() => {
     const scrollListener = () => {
-      return window.scrollY > 10
-        ? setIsBlackHeader(true)
-        : setIsBlackHeader(false);
+      return window.scrollY > 10 ? setIsBlackHeader(true) : setIsBlackHeader(false);
     };
 
-    window.addEventListener("scroll", scrollListener);
+    window.addEventListener('scroll', scrollListener);
 
     return () => {
-      window.removeEventListener("scroll", scrollListener);
+      window.removeEventListener('scroll', scrollListener);
     };
   }, []);
 
